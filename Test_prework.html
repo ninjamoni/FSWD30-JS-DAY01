@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title> Test prework js</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<p id="placeholder"></p>
+
+	<script>
+	console.log("hello world");
+	document.write("hello from the browser");
+
+	var name = "John"; // this is a variablr eith a string
+	console.log(name);
+	document.write("<hr>");
+
+	var age = 35; 
+	console.log("Hi mi name is " + name + " and i am " + age + " years old");
+
+
+	team = ['Mike', 'Tom', 'Billy']; //this is an array
+	console.log(team[0]);
+
+
+	var output = 'Hello World';
+	document.write(output.substring(6,11)); //built in method - substring
+
+	var cars = ["Tesla", "BMW", "KIA"];
+	console.log(cars.sort());
+
+	var number1 = 5;
+	var number2 ="5";
+
+	console.log(number1 + Number(number2));//conversion string to number with Number()
+
+	console.log('Hello world'.length); //built-in method concetenating string
+
+	document.write("<br>");
+
+	var a = 'hello world!';
+	document.write(a.indexOf('w')); //built-in method indexOf
+
+
+	/*var b = 'I am a JavaScript developer.';
+	var temp = new Array();
+	temp = b.split('  ');//Built-in method split
+
+	console.log(b.split[0,4]);*/
+document.write("<br>");
+	/*substring*/
+
+/*Substring function is used to take a part of a string. Syntax is substring(first_index,last_index). So for example:*/
+var a = 'Hello world!';
+document.write(a.substring(4,8));
+/*gives 'o wo', from the first 'o' (index 4) to the second one (index 7) Note that the 'r' (index 8) is not part of this substring. We can also do:*/
+
+document.write("<br>");
+var a = 'Hello world!';
+document.write(a.substring(4));
+
+document.write("<br>");
+/*This gives the whole string from the character with index 4 on: 'o world!'.
+toLowerCase and toUpperCase
+
+Two methods other useful methods are: toLowerCase() puts the whole string in lower case, toUpperCase() puts the whole string in upper case. For example:*/
+var b = 'I am a JavaScript developer.';
+document.write(b.toUpperCase());
+/*outputs 'I AM A JAVASCRIPT HACKER.'*/
+
+document.write("<br>");
+
+var a =5; //global variabel
+var b = 3;
+/*function declaration: funtion, function name (argument){statement of the function}*/
+function product() {
+	return a * b;
+
+}
+console.log(product());
+
+
+
+function sum (x, y) {
+	return x + y;
+}
+console.log(sum(15, 25));
+console.log(sum(3, 97));
+
+/*document.write(sum(3,97));*//*dirty way of programming instead use document.getElementById*/
+
+document.getElementById("placeholder").innerHTML =sum(5, 15);
+
+ document.write("<br>");
+
+(function() {
+	document.write("Hello Everyone");
+}()); /*anonomys self executing function:last ()inside the big) is self-executing --> automatically*/
+
+document.write("<br>");
+var a = 5;//global variable
+var b = 3;
+
+function product(){
+	var a = 10; //local variable - local v is stronger than global v
+	return a * b;
+}
+
+try {
+alert("Welcome students");
+} catch(e) { 
+console.log(e.message);
+};
+/*catch is for error-testing in the try-block, (e) is a global object for printing error messages*/
+
+
+function product() {
+	var a = 5;
+	var b = 3;
+	return a * b;
+}
+console.log(product(10, 10));
+
+function sum(a, b) {
+	return a + b;
+}
+console.log(sum(20,20));
+
+function blackFriday(product, price, discount) {
+
+	document.write("The " + product + " has a price of " + price + " the discount is " + discount);
+}
+
+blackFriday("Jeans", 100, 50);
+
+
+
+
+
+	</script>
+</body>
+</html>
